@@ -1,0 +1,43 @@
+Project JETS is made up of 3 files:
+	JetBuilder.java
+	ArrayOfJets.java
+	JetsMenu.java
+
+JetBuilder.java
+
+		Contains the variables necessary to build a jet. All the variables
+		are defined privately to keep the user from changing them. A
+		constructor was created to allow the user to build a jet. The file
+		also consists of getters, setters, and a toString method to allow other
+		parts of the program to set and then print the data.
+
+		This file is the building block of the whole project.
+
+ArrayOfJets.java
+
+		File made to interact with the interface of this project. It comes
+		with five hardcoded jets that are build-in the array 'jetArray' of
+		size 100. The extra space in the array is for the user to make and
+		store jets.
+
+		A 'hanger' method is used to store the gets.
+		A 'newJet' method is used to create a new jet and it relies on the
+		the methods and constructors in the 'JetBuilder' object.
+		Two additional methods - 'faster' & 'range'- are created to find
+		the fastest jet and the jet with the longest range.
+
+JetsMenu.java
+		Builds the interface of the program which the user can interact with.
+		The file contains a 'mainMenuOfJets' method and a main to allow java
+		to run the program. The main call the method which prompts:
+			1. List of all the Jets in the Hanger.
+			2. Fastest jet in the hanger.
+			3. Jets with the longest range.
+			4. Add a new jet to the hangar.
+			5. Exit.
+
+		Picking option 1 call the 'hanger' method from the 'ArrayOfJets'. The
+		second option calls the 'fastest' method. The third option calls the
+		'range' method. The fourth option allows the user to input data to build and
+		add a jet to the list of array if they wish to do so. Finally, option five
+		allows the user to exit the program. 

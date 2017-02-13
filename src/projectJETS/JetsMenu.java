@@ -14,6 +14,8 @@ public class JetsMenu {
 	public static void mainMenuOfJets() throws Exception {
 		Scanner input = new Scanner(System.in);
 		int pick;
+		
+		//Make the screen that will pop of when the program runs - total of 5 option to choose from 
 		do {
 			System.out.println("\t*********WELCOME TO THE HANGER*********\n");
 			for (int i = 0; i < 6; i++) {
@@ -22,7 +24,7 @@ public class JetsMenu {
 					System.out.println("\t1. List of all the Jets in the Hanger.");
 					break;
 				case 2:
-					System.out.println("\t2. Fasterst jet in the hangar.");
+					System.out.println("\t2. Fastest jet in the hangar.");
 					break;
 				case 3:
 					System.out.println("\t3. Jets with the longest range.");
@@ -35,9 +37,14 @@ public class JetsMenu {
 					break;
 				}
 				Thread.sleep(420);
+			// The thread.sleep is used to slowly pop up the option (STYLE POINTS TO GRYFFINDOR :) )
+			
 			}
+			
 			// System.out.println("What would you like to do?");
 			System.out.print("\n\n\t... ");
+			
+		//use switch to move around the whole program
 			pick = input.nextInt();
 
 			switch (pick) {

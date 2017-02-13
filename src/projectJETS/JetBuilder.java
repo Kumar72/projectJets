@@ -2,6 +2,8 @@ package projectJETS;
 
 import java.text.DecimalFormat;
 
+
+//declare variables so that the user can't change them #private
 public class JetBuilder {
 	private String model;
 	private float speed;
@@ -10,6 +12,8 @@ public class JetBuilder {
 	private int capacity;
 	//private Pilot pilot;
 	
+	
+	//construct a JET - done 
 	public JetBuilder(String model, float speedMPH,float rangeMiles,float price, int capacity) {
 		this.model = model;
 		speed = speedMPH;
@@ -17,6 +21,8 @@ public class JetBuilder {
 		this.price = price;
 		this.capacity = capacity;
 	}
+	
+	//to get the right number of sig. figures (FINALLY found a solution)  
 	DecimalFormat dff = new DecimalFormat(".###");
 	@Override
 	public String toString() {
@@ -24,10 +30,13 @@ public class JetBuilder {
 				"\n\tSpeed: \t\t" + dff.format(getSpeed()/767.27f)+"Mach ("+getSpeed()+"MPH)" 
 				+" \n\tRange: \t\t" + getRange() + " Miles\n\tCapacity: \t" + getCapacity() + "\n";
 	}
+	
+	//
 	public JetBuilder() {
 		
 	}
 	
+	//GETTER and SETTERS BELOW 
 	public float getPrice() {
 		return price;
 	}

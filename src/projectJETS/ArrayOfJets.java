@@ -13,6 +13,8 @@ public class ArrayOfJets {
 
 	Scanner input = new Scanner(System.in);
 
+	
+//an array field to store the hardcoded-in jets and more if the user inputs them...
 	  JetBuilder[] jetArray = new JetBuilder[100];{// throws Exception {
 		// model#, speed, range, Price, capacity, wingSpan
 		jetArray[0] = new JetBuilder("F-16", 1_500, 2_622, 1, 1);
@@ -27,15 +29,20 @@ public class ArrayOfJets {
 
 	}
 
+	  //used to store the jets
 	public void hangar() throws Exception{
 		int count =0;
 		for(int i =0; i < jetArray.length;i++) {
 			if(jetArray[i] != null) 
 				count = i+1;
+		//to keep track of the number of jets in the hanger also it allows me to use the thread.sleep more efficiently 
+			//without it the thread.sleep slows down the program. 
 		}
 
 		// stores jets in the array
 		for (int i = 0; i < count; i++) {
+			
+			//still need the next statement for style points else you can take it out
 			if (jetArray[i] != null) {
 				System.out.println(jetArray[i]);
 
@@ -46,6 +53,7 @@ public class ArrayOfJets {
 		}
 	}
 
+	//create a jet
 	public void newJet() {
 		JetBuilder create = new JetBuilder();
 		
@@ -68,7 +76,7 @@ public class ArrayOfJets {
 		
 
 	}
-
+//part 2-3 of the program below
 	public void fastest() {
 		float largestValue = 0f;
 		int largest = 0;
