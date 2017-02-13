@@ -6,7 +6,7 @@ public class ArrayOfJets {
 
 	
 	 
-	public static int index = 4;
+	public static int index = 0;
 
 	// static variable so its specific to this file
 	// if it was an instance it would change for every method
@@ -20,7 +20,7 @@ public class ArrayOfJets {
 		jetArray[2] = new JetBuilder("Sukhoi Su -27", 1_553, 2_193, 30_000_000, 1);
 		jetArray[3] = new JetBuilder("Grumman F-14", 1_544, 0, 38_000_000, 1);
 		jetArray[4] = new JetBuilder("Bell P-59", 413, 520, 0, 1);
-		 
+		 index = 5;
 		
 
 		// default for an array = null so USE IT!!!!
@@ -31,7 +31,7 @@ public class ArrayOfJets {
 		int count =0;
 		for(int i =0; i < jetArray.length;i++) {
 			if(jetArray[i] != null) 
-				count = i;
+				count = i+1;
 		}
 
 		// stores jets in the array
@@ -57,9 +57,15 @@ public class ArrayOfJets {
 		create.setRange(input.nextFloat());
 		System.out.print("Capacity of the Jet: ");
 		create.setCapacity(input.nextInt());
-
+		
+		System.out.print("Would you like to add this jet to the list (Y/N): ");
+		String check = input.next();
+		if (check.toUpperCase().equals("Y")) {	
 		index++;
 		jetArray[index] = create;
+		return;
+		}
+		
 
 	}
 

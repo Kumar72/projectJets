@@ -22,16 +22,16 @@ public class JetsMenu {
 					System.out.println("\t1. List of all the Jets in the Hanger.");
 					break;
 				case 2:
-					System.out.println("\t2. List of Fasterst jets.");
+					System.out.println("\t2. Fasterst jet in the hangar.");
 					break;
 				case 3:
-					System.out.println("\t3. List of jets with the longest range.");
+					System.out.println("\t3. Jets with the longest range.");
 					break;
 				case 4:
-					System.out.println("\t4. Add a new jet to the list.");
+					System.out.println("\t4. Add a new jet to the hangar.");
 					break;
 				case 5:
-					System.out.println("\t5. Quit.");
+					System.out.println("\t5. Exit.");
 					break;
 				}
 				Thread.sleep(420);

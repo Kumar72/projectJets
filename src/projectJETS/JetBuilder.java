@@ -20,7 +20,7 @@ public class JetBuilder {
 	DecimalFormat dff = new DecimalFormat(".###");
 	@Override
 	public String toString() {
-		return "\t**************************************\n\tModel: \t\t" + getModel() + 
+		return "\t***************************************\n\tModel: \t\t" + getModel() + 
 				"\n\tSpeed: \t\t" + dff.format(getSpeed()/767.27f)+"Mach ("+getSpeed()+"MPH)" 
 				+" \n\tRange: \t\t" + getRange() + " Miles\n\tCapacity: \t" + getCapacity() + "\n";
 	}
